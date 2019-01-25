@@ -1,0 +1,52 @@
+body {
+     background: url('https://www.digitalmarketingcourses.in/blog/wp-content/uploads/2015/07/Digital-Marketing-Career.jpg') fixed;
+    background-size: cover;
+}
+
+.fields{
+	margin-bottom : 6%;
+}
+
+.error{
+	position: relative;
+	min-height: 24px;
+	margin-bottom: 0%;
+	margin-left: 26%;
+	
+}
+
+
+.para-error{
+	color: red;
+	margin-bottom: 0%;
+	height: 5%;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+}
+
+*[role="form"] h2 { 
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5%;
+   
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}

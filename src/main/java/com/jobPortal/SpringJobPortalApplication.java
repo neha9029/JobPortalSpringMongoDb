@@ -1,4 +1,4 @@
-package com.jobPortal.app;
+package com.jobPortal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

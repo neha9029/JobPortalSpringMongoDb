@@ -1,20 +1,59 @@
 package com.jobPortal.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Register {
 	
-	public String firstName; 
 	
-	public String lastName;
+	@NotEmpty(message = "Please enter First Name")
+	private String firstName; 
 	
-	public String email;
+	@NotEmpty(message="Please enter Last Name")
+	private String lastName;
 	
-	public String phone;
+	@NotEmpty(message="Please enter Email Id")
+	@Email(message="Enter valid Email")
+	private String email;
 	
-	public String typeOfAccount;
+	@NotEmpty(message="Please enter Phone Number")
+	private String phone;
 	
-	public String password;
+	@NotEmpty(message="Please select AccountType")
+	private String accountType;
 	
-	public int userId;
+	@NotEmpty(message="Please enter Password")
+	@Size(min = 4, message="Please enter atleast 4 letter password")
+	private String password;
+	
+	@NotEmpty(message="Please enter Password again")
+	private String confirmPassword;
+	
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -32,12 +71,13 @@ public class Register {
 		this.lastName = lastName;
 	}
 
-	public String getTypeOfAccount() {
-		return typeOfAccount;
+
+	public String getAccountType() {
+		return accountType;
 	}
 
-	public void setTypeOfAccount(String typeOfAccount) {
-		this.typeOfAccount = typeOfAccount;
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
 	}
 
 	public String getPassword() {
@@ -48,20 +88,16 @@ public class Register {
 		this.password = password;
 	}
 
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
 	@Override
 	public String toString() {
-		return "Register [firstName=" + firstName + ", lastName=" + lastName + ", typeOfAccount=" + typeOfAccount
-				+ ", password=" + password + ", userId=" + userId + "]";
+		return "Register [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", phone=" + phone
+				+ ", accountType=" + accountType + ", password=" + password + ", confirmPassword=" + confirmPassword
+				+ "]";
 	}
+
 	
+
+
 	
 
 }
